@@ -1,0 +1,17 @@
+import os
+os.environ["PATH"] += os.pathsep + r"C:\ffmpeg-2025-07-21-git-8cdb47e47a-essentials_build (1)\ffmpeg-2025-07-21-git-8cdb47e47a-essentials_build\bin"
+
+
+from src.transcribe import transcribe_audio
+
+
+audio_path = r"C:\Users\DELL\OneDrive\Documents\nlp-conversation-assistant\data\audio.mp3"
+
+# Call the transcribe function
+transcript = transcribe_audio(audio_path)
+
+# Save the transcript to a text file
+with open("outputs/transcript.txt", "w", encoding="utf-8") as f:
+    f.write(transcript)
+
+print("Transcribed audio saved.")

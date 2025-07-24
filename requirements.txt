@@ -1,0 +1,6 @@
+whisper
+torch
+transformers
+keybert
+sentence-transformers
+streamlit
