@@ -3,7 +3,7 @@ os.environ["PATH"] += os.pathsep + r"C:\ffmpeg-2025-07-21-git-8cdb47e47a-essenti
 
 
 from src.transcribe import transcribe_audio
-
+from src.summarize import summarize_text
 
 audio_path = r"C:\Users\DELL\OneDrive\Documents\nlp-conversation-assistant\data\audio.mp3"
 
@@ -15,3 +15,11 @@ with open("outputs/transcript.txt", "w", encoding="utf-8") as f:
     f.write(transcript)
 
 print("Transcribed audio saved.")
+with open("outputs/transcript.txt","r",encoding="utf-8") as f:
+    transcript_text = f.read()
+
+summary = summarize_text(transcript_text)
+
+with open("outputs/summary.txt","w",encoding="utf-8") as f:
+    f.write(summary)
+print("summary saved..")
