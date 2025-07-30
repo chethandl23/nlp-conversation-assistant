@@ -4,3 +4,4 @@ transformers
 keybert
 sentence-transformers
 streamlit
+huggingface_hub[hf_xet]
